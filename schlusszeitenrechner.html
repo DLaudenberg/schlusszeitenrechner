@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>Schlusszeitenrechner</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- FONT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,700" type="text/css">
+
+	<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" type="text/css" href="libs/skeleton-2.0.4/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="libs/skeleton-2.0.4/css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<!-- Favicon
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+	<div class="container">
+
+		<h1>Schluss&shy;zeiten&shy;rechner</h1>
+
+		<form name="schlusszeitrechner">
+
+			<div class="row">
+				<div class="four columns">
+
+					<div class="form-container">
+						<label for="starttime">Start</label>
+						<input type="time" id="starttime" name="starttime" value="08:30">
+						<small class="hint">z.B. 08:30</small>
+					</div>
+
+				</div>
+				<div class="four columns">
+
+					<div class="form-container">
+						<label for="overtime">&Uuml;ber-/Unterstunden</label>
+						<input type="time" id="overtime" name="overtime" value="00:00">
+						<small class="hint">z.B. 0:15</small>
+					</div>
+
+					<div class="form-container">
+						<label>
+							<input type="checkbox" id="is_undertime" name="is_undertime">
+							<span class="label-body">Unterstunden?</span>
+						</label>
+					</div>
+
+				</div>
+				<div class="four columns">
+
+					<div class="form-container">
+						<label for="breaktime">Pause</label>
+						<input type="time" id="breaktime" name="breaktime" value="">
+						<small class="hint">z.B. 0:30</small>
+					</div>
+
+				</div>
+				<div class="four columns">
+
+					<div class="form-container">
+						<input type="submit" id="submit" name="submit" value="Berechnen" class="button-primary">
+					</div>
+
+				</div>
+			</div>
+
+		</form>
+
+		<blockquote id="output_finaltimes">
+			<span id="output_starttime">__:__</span> + 08:00 (- <span id="output_overtime">__:__</span>) + Pause 
+			= <span id="output_halftime">__:__</span> + Pause 
+			= <span id="output_endtime">__:__</span>
+		</blockquote>
+
+		<!-- <div class="notes">
+			<textarea>https://css-tricks.com/almanac/properties/s/scrollbar/</textarea>
+		</div> -->
+
+	</div>
+
+	<!-- JavaScript
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script type="text/javascript" src="scripts.js"></script>
+
+</body>
+</html>
