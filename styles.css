@@ -50,55 +50,6 @@ blockquote {
 	border-left: 2px solid #336699;
 }
 
-/* button */
-.button.button-primary, button.button-primary, input[type="submit"].button-primary, input[type="reset"].button-primary, input[type="button"].button-primary {
-  color: #FFF;
-  background-color: #336699;
-  border-color: #336699;
-}
-.button.button-primary:hover, button.button-primary:hover, input[type="submit"].button-primary:hover, input[type="reset"].button-primary:hover, input[type="button"].button-primary:hover,
-.button.button-primary:focus, button.button-primary:focus, input[type="submit"].button-primary:focus, input[type="reset"].button-primary:focus, input[type="button"].button-primary:focus {
-  color: #FFF;
-  background-color: #2e5c8a; /* hsl > l um 10% reduziert */
-  border-color: #2e5c8a;
-}
-
-.button.button-neutral, button.button-neutral, input[type="submit"].button-neutral, input[type="reset"].button-neutral, input[type="button"].button-neutral {
-  color: #FFF;
-  background-color: #999999;
-  border-color: #999999;
-}
-.button.button-neutral:hover, button.button-neutral:hover, input[type="submit"].button-neutral:hover, input[type="reset"].button-neutral:hover, input[type="button"].button-neutral:hover,
-.button.button-neutral:focus, button.button-neutral:focus, input[type="submit"].button-neutral:focus, input[type="reset"].button-neutral:focus, input[type="button"].button-neutral:focus {
-  color: #FFF;
-  background-color: #8a8a8a; /* hsl > l um 10% reduziert */
-  border-color: #8a8a8a;
-}
-
-.button.button-start, button.button-start, input[type="submit"].button-start, input[type="reset"].button-start, input[type="button"].button-start {
-  color: #FFF;
-  background-color: #339933;
-  border-color: #339933;
-}
-.button.button-start:hover, button.button-start:hover, input[type="submit"].button-start:hover, input[type="reset"].button-start:hover, input[type="button"].button-start:hover,
-.button.button-start:focus, button.button-start:focus, input[type="submit"].button-start:focus, input[type="reset"].button-start:focus, input[type="button"].button-start:focus {
-  color: #FFF;
-  background-color: #2e8a2e; /* hsl > l um 10% reduziert */
-  border-color: #2e8a2e;
-}
-
-.button.button-stop, button.button-stop, input[type="submit"].button-stop, input[type="reset"].button-stop, input[type="button"].button-stop {
-  color: #FFF;
-  background-color: #993333;
-  border-color: #993333;
-}
-.button.button-stop:hover, button.button-stop:hover, input[type="submit"].button-stop:hover, input[type="reset"].button-stop:hover, input[type="button"].button-stop:hover,
-.button.button-stop:focus, button.button-stop:focus, input[type="submit"].button-stop:focus, input[type="reset"].button-stop:focus, input[type="button"].button-stop:focus {
-  color: #FFF;
-  background-color: #8a2e2e; /* hsl > l um 10% reduziert */
-  border-color: #8a2e2e;
-}
-
 /* Forms */
 input[type="time"] {
   height: 38px;

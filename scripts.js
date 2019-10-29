@@ -191,14 +191,7 @@ var regex_time = new RegExp( /^[0-9]{1,2}:[0-9]{2}$/i );
 // 
 // init
 // 
-endtime_form.addEventListener("submit", function (e) {
-
-	e.preventDefault();
-	output_finaltimes( calculateFinaltimes() );
-	return false;
-}, false );
-
-endtime_form.addEventListener("change", function (e) {
+endtime_form.addEventListener( "change", function ( e ) {
 
 	e.preventDefault();
 	output_finaltimes( calculateFinaltimes() );
