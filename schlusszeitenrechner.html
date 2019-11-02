@@ -5,7 +5,7 @@
 	<!-- Basic Page Needs
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<meta charset="utf-8">
-	<title>Schlusszeitenrechner</title>
+	<title data-localization="title">Schlusszeitenrechner</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -31,32 +31,36 @@
 
 	<div class="container">
 
-		<h1>Schluss&shy;zeiten&shy;rechner</h1>
+		<div class="localization-buttons">
+			<span data-localization-lang="de" class="localization-button localization-de">Deutsch</span>
+			<span data-localization-lang="en" class="localization-button localization-en">English</span>
+		</div>
+
+		<h1 data-localization="headline">Schluss&shy;zeiten&shy;rechner</h1>
 
 		<form name="schlusszeitrechner">
-
 			<div class="row">
 				<div class="four columns">
 
 					<div class="form-container">
-						<label for="starttime">Start</label>
+						<label for="starttime" data-localization="starttime.label">Start</label>
 						<input type="time" id="starttime" name="starttime" value="08:30">
-						<small class="hint">z.B. 08:30</small>
+						<small class="hint" data-localization="starttime.hint">z.B. 08:30</small>
 					</div>
 
 				</div>
 				<div class="four columns">
 
 					<div class="form-container">
-						<label for="overtime">&Uuml;ber-/Unterstunden</label>
+						<label for="overtime" data-localization="overtime.label">&Uuml;ber-/Unterstunden</label>
 						<input type="time" id="overtime" name="overtime" value="00:00">
-						<small class="hint">z.B. 0:15</small>
+						<small class="hint" data-localization="overtime.hint">z.B. 0:15</small>
 					</div>
 
 					<div class="form-container">
 						<label>
 							<input type="checkbox" id="is_undertime" name="is_undertime">
-							<span class="label-body">Unterstunden?</span>
+							<span class="label-body" data-localization="undertime.label">Unterstunden?</span>
 						</label>
 					</div>
 
@@ -64,9 +68,9 @@
 				<div class="four columns">
 
 					<div class="form-container">
-						<label for="breaktime">Pause</label>
+						<label for="breaktime" data-localization="breaktime.label">Pause</label>
 						<input type="time" id="breaktime" name="breaktime" value="">
-						<small class="hint">z.B. 0:30</small>
+						<small class="hint" data-localization="breaktime.hint">z.B. 0:30</small>
 					</div>
 
 				</div>
@@ -75,8 +79,8 @@
 		</form>
 
 		<blockquote id="output_finaltimes">
-			<span id="output_starttime">__:__</span> + 08:00 (- <span id="output_overtime">__:__</span>) + Pause 
-			= <span id="output_halftime">__:__</span> + Pause 
+			<span id="output_starttime">__:__</span> + 08:00 (- <span id="output_overtime">__:__</span>) + <span data-localization="output.break">Pause</span>
+			= <span id="output_halftime">__:__</span> + <span data-localization="output.break">Pause</span>
 			= <span id="output_endtime">__:__</span>
 		</blockquote>
 

@@ -1,0 +1,22 @@
+{
+	"title": "Schlusszeitenrechner",
+	"headline": "Schluss&shy;zeiten&shy;rechner",
+	"starttime": {
+		"label": "Starttime",
+		"hint": "e.g. 08:30"
+	},
+	"overtime": {
+		"label": "Over-/Undertime",
+		"hint": "e.g. 0:15"
+	},
+	"undertime": {
+		"label": "Undertime?"
+	},
+	"breaktime": {
+		"label": "Breaktime",
+		"hint": "e.g. 0:30"
+	},
+	"output": {
+		"break": "Break"
+	}
+}

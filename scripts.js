@@ -1,3 +1,7 @@
+// 
+// CALCULATION OF TIMES
+// 
+
 var TimeUtil = (function () {
 
 	_roundToQuarter = function( number ) {
@@ -207,3 +211,119 @@ var initFinalTimes = function() {
 }
 
 initFinalTimes();
+
+// 
+// LOCALIZATION
+// https://codeburst.io/translating-your-website-in-pure-javascript-98b9fa4ce427
+// 
+
+var Localizator = function() {
+
+	var _dataAttributename = "data-localization";
+	var _languages = ["de", "en"];
+
+	this.elements;
+	this.lang;
+
+	var _getDefaultLanguage = function() {
+
+		var langString = document.documentElement.lang
+			? document.documentElement.lang
+			: document.body.getAttribute("data-lang")
+			? document.body.getAttribute("data-lang")
+			: navigator.languages
+			? navigator.languages[0]
+			: navigator.language;
+
+		var lang = langString.substr(0, 2);
+
+		if (_languages.indexOf(lang) > -1) {
+			return lang;
+		}
+
+		console.warn("Language " + lang + " does not exist.")
+		return _languages[0];
+	}
+
+	var _translate = function(translation) {
+
+		for (var i = 0, ii = this.elements.length; i < ii; i++) {
+
+			var element = this.elements[i];
+
+			var keys = element.getAttribute(_dataAttributename).split(".");
+			var text = keys.reduce(function(obj, i) {
+				return obj[i];
+			}, translation);
+
+			if (text) {
+				element.innerHTML = text;
+			}
+		};
+	}
+
+	var _loadTranslationFiles = function() {
+
+		var _this = this;
+
+		// load translation files
+		var request = new XMLHttpRequest();
+		request.open("GET", "localization/" + this.lang + ".json", true);
+
+		request.onload = function() {
+
+			if (this.status >= 200 && this.status < 400) {
+
+				// Success!
+				var translation = JSON.parse(this.response);
+
+				_translate.call(_this, translation);
+				document.body.setAttribute("data-lang", _this.lang);
+			}
+			else {
+
+				// We reached our target server, but it returned an error
+				console.error("Could not load " + this.lang + ".json");
+			}
+		};
+
+		request.onerror = function() {
+
+			// There was a connection error of some sort
+			console.error("Could not load " + this.lang + ".json");
+		};
+
+		request.send();
+	}
+
+	this.init = function() {
+
+		this.elements = document.querySelectorAll("[" + _dataAttributename + "]");
+		this.lang = _getDefaultLanguage();
+
+		document.body.setAttribute("data-lang", this.lang);
+
+		localizationToggles = document.querySelectorAll("[data-localization-lang]");
+
+		for (var i = 0, ii = localizationToggles.length; i < ii; i++) {
+
+			var localizationToggle = localizationToggles[i];
+			localizationToggle.addEventListener("click", function() {
+				var lang = this.getAttribute("data-localization-lang");
+				localizator.load(lang)
+			});
+		};
+	}
+
+	this.load = function(lang) {
+
+		if (lang) {
+			this.lang = lang;
+		}
+
+		_loadTranslationFiles.call(this);
+	}
+}
+
+var localizator = new Localizator();
+localizator.init();

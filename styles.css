@@ -89,6 +89,40 @@ textarea:focus,
 select:focus {
   border-color: #336699; }
 
+/* localization */
+.localization-buttons {
+  position: absolute;
+  right: 3em;
+  top: 2em;
+}
+.localization-button {
+  cursor: pointer;
+}
+.localization-button:before {
+  content: "";
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  margin-bottom: -0.1em;
+  margin-right: 0.5em;
+  border: 1px solid #333;
+  border-radius: 50%;
+  vertical-align: baseline;
+  background: none center #ccc;
+  background-size: cover;
+}
+.localization-button.localization-de:before {
+  background-image: url(localization/flag-de.png);
+}
+.localization-button.localization-en:before {
+  background-image: url(localization/flag-en.png);
+}
+
+body[data-lang="de"] .localization-de,
+body[data-lang="en"] .localization-en {
+  display: none;
+}
+
 /* notes */
 .notes {
   padding: 1em;
