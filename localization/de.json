@@ -7,10 +7,9 @@
 	},
 	"overtime": {
 		"label": "&Uuml;ber-/Unterstunden",
-		"hint": "z.B. 0:15"
-	},
-	"undertime": {
-		"label": "Unterstunden?"
+		"hint": "z.B. 0:15",
+		"toggleOff": "&Uuml;berstunden",
+		"toggleOn": "Unterstunden"
 	},
 	"breaktime": {
 		"label": "Pause",

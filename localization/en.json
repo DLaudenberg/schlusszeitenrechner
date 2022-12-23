@@ -7,10 +7,9 @@
 	},
 	"overtime": {
 		"label": "Over-/Undertime",
-		"hint": "e.g. 0:15"
-	},
-	"undertime": {
-		"label": "Undertime?"
+		"hint": "e.g. 0:15",
+		"toggleOff": "Overtime",
+		"toggleOn": "Undertime"
 	},
 	"breaktime": {
 		"label": "Breaktime",
