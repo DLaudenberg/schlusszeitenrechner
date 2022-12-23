@@ -85,8 +85,7 @@ input[type="time"] {
 }
 
 input[type="time"]:focus {
-	border: 1px solid #336699;
-	outline: 0;
+	outline: 2px solid #336699;
 }
 
 input[type="email"],
@@ -111,6 +110,7 @@ input[type="password"]:focus,
 textarea:focus,
 select:focus {
 	border-color: #336699;
+	outline: 2px solid #336699;
 }
 
 /* localization */
