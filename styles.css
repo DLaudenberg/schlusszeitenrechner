@@ -1,22 +1,38 @@
-*, *:before, *:after {
+/*
+COLORS
+
+	#336699 | blue default
+	#2e5c8a | blue dark - hsl > "l" reduced by 10%
+
+	#f0f0f0 | grey lightest
+	#999999 | grey medium
+	#333333 | grey dark
+*/
+
+*,
+*:before,
+*:after {
 	box-sizing: border-box;
 }
-html, body {
+
+html,
+body {
 	background-color: #f0f0f0;
 }
 
 a {
-  color: #336699;
+	color: #336699;
 }
+
 a:hover {
-  color: #2e5c8a; /* hsl > l um 10% reduziert */
+	color: #2e5c8a;
 }
 
 .container {
 	max-width: 800px;
 	padding: 5em 3em;
 	background-color: #ffffff;
-	box-shadow: 0 0 1em 0 rgba(0,0,0,0.2);
+	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
 	margin: 2em auto
 }
 
@@ -46,27 +62,32 @@ small.hint {
 blockquote {
 	margin: 0;
 	padding: 1em 1em 1em 2em;
-	border: 1px solid #999;
+	border: 1px solid #999999;
 	border-left: 2px solid #336699;
 }
 
 /* Forms */
 input[type="time"] {
-  height: 38px;
-  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-  background-color: #fff;
-  border: 1px solid #999999;
-  border-radius: 4px;
-  box-shadow: none;
-  box-sizing: border-box; }
+	height: 38px;
+	padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+	background-color: #ffffff;
+	border: 1px solid #999999;
+	border-radius: 4px;
+	box-shadow: none;
+	box-sizing: border-box;
+}
+
 /* Removes awkward default styles on some inputs for iOS */
 input[type="time"] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none; }
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
 input[type="time"]:focus {
-  border: 1px solid #336699;
-  outline: 0; }
+	border: 1px solid #336699;
+	outline: 0;
+}
 
 input[type="email"],
 input[type="number"],
@@ -77,7 +98,9 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-  border-color: #999999; }
+	border-color: #999999;
+}
+
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
@@ -87,58 +110,63 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border-color: #336699; }
+	border-color: #336699;
+}
 
 /* localization */
 .localization-buttons {
-  position: absolute;
-  right: 3em;
-  top: 2em;
+	position: absolute;
+	right: 3em;
+	top: 2em;
 }
+
 .localization-button {
-  cursor: pointer;
+	cursor: pointer;
 }
+
 .localization-button:before {
-  content: "";
-  display: inline-block;
-  width: 1.2em;
-  height: 1.2em;
-  margin-bottom: -0.1em;
-  margin-right: 0.5em;
-  border: 1px solid #333;
-  border-radius: 50%;
-  vertical-align: baseline;
-  background: none center #ccc;
-  background-size: cover;
+	content: "";
+	display: inline-block;
+	width: 1.2em;
+	height: 1.2em;
+	margin-bottom: -0.1em;
+	margin-right: 0.5em;
+	border: 1px solid #333333;
+	border-radius: 50%;
+	vertical-align: baseline;
+	background: none center #f0f0f0;
+	background-size: cover;
 }
+
 .localization-button.localization-de:before {
-  background-image: url(localization/flag-de.png);
+	background-image: url(localization/flag-de.png);
 }
+
 .localization-button.localization-en:before {
-  background-image: url(localization/flag-en.png);
+	background-image: url(localization/flag-en.png);
 }
 
 body[data-lang="de"] .localization-de,
 body[data-lang="en"] .localization-en {
-  display: none;
+	display: none;
 }
 
 /* notes */
 .notes {
-  padding: 1em;
-  font-family: monospace;
-  background: #333;
-  border-radius: 4px;
-  color: #f2f2f2;
+	padding: 1em;
+	font-family: monospace;
+	background: #333333;
+	border-radius: 4px;
+	color: #f0f0f0;
 }
 
 .notes textarea {
-  display: block;
-  width: 100% !important;
-  height: 250px;
-  font: inherit;
-  border: 0 none;
-  background: none transparent;
-  margin: 0 !important;
-  padding: 0;
+	display: block;
+	width: 100% !important;
+	height: 250px;
+	font: inherit;
+	border: 0 none;
+	background: none transparent;
+	margin: 0 !important;
+	padding: 0;
 }
