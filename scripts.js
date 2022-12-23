@@ -235,7 +235,7 @@ var Localizator = function() {
 			? navigator.languages[0]
 			: navigator.language;
 
-		var lang = langString.substr(0, 2);
+		var lang = langString.substring(0, 2);
 
 		if (_languages.indexOf(lang) > -1) {
 			return lang;
@@ -283,14 +283,14 @@ var Localizator = function() {
 			else {
 
 				// We reached our target server, but it returned an error
-				console.error("Could not load " + this.lang + ".json");
+				console.error("Could not load " + _this.lang + ".json");
 			}
 		};
 
 		request.onerror = function() {
 
 			// There was a connection error of some sort
-			console.error("Could not load " + this.lang + ".json");
+			console.error("Could not load " + _this.lang + ".json");
 		};
 
 		request.send();
